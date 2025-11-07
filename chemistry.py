@@ -345,6 +345,18 @@ def main():
         # Reports an element symbol not present in the periodic table dictionary.
         missing = str(ex).strip("'")
         print(f"Error: unknown element symbol in formula: {missing}")
+        
+        
+    # ------------------------------------------------
+    # Prompt user to run again or exit
+    # ------------------------------------------------
+    again = input("\nWould you like to analyze another sample? (yes/no): ").strip().lower()
+    if again in ("yes", "y"):
+        print()  # adds a blank line for readability
+        main()   # restarts the program
+    else:
+        print("\nExiting program. Thank you for using the molar mass calculator!")
+
 
 
 # Executes main() only when this file is run directly.
